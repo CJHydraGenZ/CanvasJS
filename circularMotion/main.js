@@ -96,7 +96,7 @@ let partikel
 function init() {
     partikel = []
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 80; i++) {
         // objects.push()
 
         const radius = (Math.random() * 2) + 1;
