@@ -42,10 +42,11 @@ function Partikel(x, y, radius, color) {
     this.color = color
     this.radians = Math.random() * Math.PI * 2;
     this.velocity = 0.05
-    this.distanceFromCenter = {
-        x: randomIntFromRange(50, 120),
-        y: randomIntFromRange(50, 120)
-    };
+    // this.distanceFromCenter = {
+    //     x: randomIntFromRange(50, 120),
+    //     y: randomIntFromRange(50, 120)
+    // };
+    this.distanceFromCenter = randomIntFromRange(50, 120)
 
     this.lastMouse = {
         x: x,
@@ -67,8 +68,8 @@ function Partikel(x, y, radius, color) {
 
         // circularMotion
         this.radians += this.velocity;
-        this.x = this.lastMouse.x + Math.cos(this.radians) * this.distanceFromCenter.x
-        this.y = this.lastMouse.y + Math.sin(this.radians) * this.distanceFromCenter.y;
+        this.x = this.lastMouse.x + Math.cos(this.radians) * this.distanceFromCenter
+        this.y = this.lastMouse.y + Math.sin(this.radians) * this.distanceFromCenter;
 
 
         this.draw(lasthpoint)
@@ -96,7 +97,7 @@ let partikel
 function init() {
     partikel = []
 
-    for (let i = 0; i < 80; i++) {
+    for (let i = 0; i < 100; i++) {
         // objects.push()
 
         const radius = (Math.random() * 2) + 1;
@@ -109,7 +110,7 @@ function init() {
 // Animation Loop
 function animate() {
     requestAnimationFrame(animate)
-    c.fillStyle = `rgba(255,255,255,0.3)`
+    c.fillStyle = `rgba(255,255,255,0.05)`
     c.fillRect(0, 0, canvas.width, canvas.height)
 
     // c.fillText('HTML CANVAS BOILERPLATE', mouse.x, mouse.y)
