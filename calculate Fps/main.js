@@ -48,7 +48,8 @@ function init() {
             color: 175,
             vx: -4,
             vy: -6
-        }
+        },
+
     ];
 
     // console.log(circle);
@@ -57,15 +58,19 @@ function init() {
     //    
     function draw(time) {
 
+        var fps = document.querySelector('#fps');
+
 
         var FPS = Math.floor(1000 / (time - previusFrameTime));
+        fps.textContent = `${FPS} FPS`;
 
         previusFrameTime = time;
-        console.log(FPS);
+        // console.log(FPS);
 
-        c.font = 'normal bold 4em courier';
+        // c.font = 'normal bold 4em courier';
+
         //   context.clearRect(0, 0, canvas.width, canvas.height)
-        c.fillText(FPS, 200, 200);
+        // c.fillText(FPS, 200, 200);
 
 
 
