@@ -52,7 +52,7 @@ window.addEventListener('load', () => {
         ctx.clearRect(mouse.x, mouse.y, cv.width, cv.height)
         ctx.stroke();
 
-
+c
         requestAnimationFrame(draw);
     }
 

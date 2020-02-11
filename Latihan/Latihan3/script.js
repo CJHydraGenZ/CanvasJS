@@ -1,0 +1,5 @@
+document.querySelector;
+
+
+
+TabNine::webkitConvertPointFromPageToNode
